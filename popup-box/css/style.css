@@ -1,0 +1,139 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 16px;
+  color: #fff;
+  width:200px;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  font-weight:bold;
+  border: 2px solid #d4b132;
+  margin:300px auto;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #d4b132;
+  color: #000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 10px;
+  background: #d4b132;
+  color: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 5ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #000000;
+}
+
+
+.login-page {
+  width: 80%;
+  height: 80%;
+  padding: 5% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 auto 100px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.form input {
+  outline: 0;
+  background: #000000;
+  color: #d4b132;
+  width: 90%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  outline: 0;
+  background: #000;
+  float: left;
+  width: 50%;
+  border: 0;
+  padding: 15px;
+  color: #d4b132;
+  font-size: 14px;
+  -webkit-transition: all 0.1 ease;
+  transition: all 0.1 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #d4b132;
+  color: #000;
+  border: 1px solid #000;
+}
+.title{
+  color: #000;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 85%;
+  }
+  .popup{
+    width: 85%;
+  }
+}
